@@ -1,40 +1,44 @@
-/* Général */
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: Courier;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #231d1f;
+    color: #e67e22;
+}
+
+#P0 {
+  text-decoration: underline #FF3028;
+  font-size : 1.1em;
+  color :  #e74c3c ;
+  font-family: Arial, sans-serif;
+  margin: auto;
+  padding: auto;
+}
+
+#P1 {
+  color : #ff3377;
+  margin: auto;
+  padding: auto;
+  line-height: 2;
+  font-size : 1.3em;
+  font-family: Courier;
+}
+
+#P2 {
+  color : #ff3377;
+  margin: auto;
+  padding: auto;
+  line-height: 2;
+  font-size : 1.3em;
+  font-family: Courier;
 }
 
 /* En-tête */
 header {
-    background: #333;
-    color: #fff;
+    background: #231d1f;
+    color:  #1abc9c ;
     padding: 1em 0;
     text-align: center;
-}
-
-/* Bouton */
-button.btn {
-    background-color: #008cba;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1em;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-button.btn:hover {
-    background-color: #005f73;
-}
-
-/* Pied de page */
-footer {
-    text-align: center;
-    padding: 1em 0;
-    background: #ddd;
-    margin-top: 20px;
 }
