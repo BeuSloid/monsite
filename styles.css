@@ -1,0 +1,40 @@
+/* Général */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* En-tête */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+}
+
+/* Bouton */
+button.btn {
+    background-color: #008cba;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button.btn:hover {
+    background-color: #005f73;
+}
+
+/* Pied de page */
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background: #ddd;
+    margin-top: 20px;
+}
