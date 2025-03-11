@@ -1,61 +1,107 @@
-
+/* 🔹 Style général du body */
 body {
-    font-family: Courier;
-    line-height: 1.6;
+    font-family: Courier, monospace;
+    font-size: 14px;
+    line-height: 1.8;
     margin: 0;
     padding: 0;
     background-color: #231d1f;
     color: #e67e22;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 30px; /* Augmente l'espacement pour éviter un rendu trop compact */
 }
 
-#P0 {
-  text-decoration: underline #FF3028;
-  font-size : 1.1em;
-  color :  #e74c3c ;
-  font-family: Arial, sans-serif;
-  margin: auto;
-  padding: auto;
+/* 🔹 Conteneur principal */
+.container {
+    background: #2c2628;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    max-width: 900px;  /* Augmenté pour PC */
+    width: 100%;
+    border: none;
+    box-shadow: none;
 }
 
-#P1 {
-  color : #ff3377;
-  margin: auto;
-  padding: auto;
-  line-height: 2;
-  font-size : 1.3em;
-  font-family: Courier;
-}
-
-#P2 {
-  color : #ff3377;
-  margin: auto;
-  padding: auto;
-  line-height: 2;
-  font-size : 1.3em;
-  font-family: Courier;
-}
-
-/* En-tête */
+/* 🔹 En-tête */
 header {
     background: #231d1f;
-    color:  #1abc9c ;
-    padding: 1em 0;
+    color: #1abc9c;
     text-align: center;
+    font-size: 1.5em; /* Plus grand pour PC */
+    border: none;
+    box-shadow: none;
+    outline: non;
+    margin: 0;
+    padding: 0;
 }
 
+h1 {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    display: block;
+}
+
+
+/* 🔹 Titres et paragraphes */
+#P0 {
+    text-decoration: underline #FF3028;
+    font-size: 1.2em; /* Texte plus grand */
+    color: #ff4444;
+    text-shadow: 0 0 3px #cc0000;
+    font-family: Arial, sans-serif;
+    margin-bottom: 15px;
+}
+
+#P1, #P2, #P3 {
+    color: #ff00ff; /* Magenta vif */
+    text-shadow: 0 0 1px #ff00ff, 0 0 4px #ff0044, 0 0 6px #ff0000;
+    font-size: 1.1em; /* Augmenté pour PC */
+    font-family: Courier, monospace;
+    margin-bottom: 20px;
+}
+
+/* 🔹 Bouton stylisé */
 a.btn {
     display: inline-block;
     text-decoration: none;
     background-color: #008cba;
     color: white;
-    padding: 10px 20px;
-    margin: 20px 0;
-    font-size: 1em;
-    border-radius: 5px;
-    text-align: center;
-    transition: background-color 0.3s ease;
+    padding: 10px 15px;
+    margin-top: 20px;
+    font-size: 1em; /* Plus grand pour PC */
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s;
 }
 
 a.btn:hover {
     background-color: #005f73;
+    transform: scale(1.05); /* Effet de zoom au survol */
+}
+
+/* 🔹 Responsive Design */
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 95%;
+        padding: 20px;
+    }
+
+    #P0 {
+        font-size: 1.2em;
+    }
+
+    #P1, #P2, #P3 {
+        font-size: 1.1em;
+    }
+
+    a.btn {
+        font-size: 1.1em;
+        padding: 12px 18px;
+    }
 }
