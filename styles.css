@@ -67,6 +67,25 @@ h1 {
     margin-bottom: 20px;
 }
 
+/* 🔹 Header spécifique pour les pages de règles */
+.rules-header {
+    width: 100%;
+    background-color: #231d1f;
+    color: #1abc9c;
+    text-align: center;
+    padding: 20px 0;
+    position: relative; /* Enlève le positionnement fixe */
+}
+
+/* 🔹 Ajustement du main */
+.rules-header main {
+    margin-top: 10px; /* Petit espace sous le titre */
+    padding: 20px;
+    text-align: center;
+    color: #e67e22; /* Couleur du texte */
+}
+
+
 /* 🔹 Bouton stylisé */
 a.btn {
     display: inline-block;
