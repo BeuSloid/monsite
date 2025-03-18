@@ -104,6 +104,21 @@ a.btn:hover {
     transform: scale(1.05); /* Effet de zoom au survol */
 }
 
+/* 🔹 Liste dans les règles */
+.rules-header ul {
+    list-style-type: disc; /* Utilise des puces normales */
+    padding-left: 20px; /* Ajoute un léger décalage à gauche */
+    text-align: left; /* Aligne le texte à gauche pour une meilleure lisibilité */
+    display: inline-block; /* Centre la liste tout en gardant l'alignement */
+}
+
+.rules-header li {
+    margin-bottom: 10px; /* Ajoute un espace entre chaque élément de la liste */
+    font-size: 1.1em; /* Agrandit légèrement le texte */
+    color: #e67e22; /* Couleur du texte */
+}
+
+
 /* 🔹 Responsive Design */
 @media screen and (max-width: 768px) {
     .container {
