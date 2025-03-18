@@ -118,6 +118,12 @@ a.btn:hover {
     color: #e67e22; /* Couleur du texte */
 }
 
+.img-style {
+    width: 300px; /* Largeur en pixels */
+    height: auto; /* Ajuste la hauteur automatiquement */
+    border-radius: 10px; /* Coins arrondis */
+}
+
 
 /* 🔹 Responsive Design */
 @media screen and (max-width: 768px) {
