@@ -1,147 +1,282 @@
-/* 🔹 Style général du body */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+  }
+
 body {
-    font-family: Courier, monospace;
-    font-size: 14px;
-    line-height: 1.8;
-    margin: 0;
-    padding: 0;
-    background-color: #231d1f;
-    color: #e67e22;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    text-align: center;
-    padding: 30px; /* Augmente l'espacement pour éviter un rendu trop compact */
+    font-family: 'Acme', 'Raleway', sans-serif;
+    font-size: 16px;
+    background-image: url(images/grey.jpg);
 }
 
-/* 🔹 Conteneur principal */
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
 .container {
-    background: #2c2628;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    max-width: 900px;  /* Augmenté pour PC */
-    width: 100%;
-    border: none;
-    box-shadow: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 2fr 0.5fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". . ."
+    "name card-box nav"
+    ". . .";
 }
 
-/* 🔹 En-tête */
-header {
-    background: #231d1f;
-    color: #1abc9c;
-    text-align: center;
-    font-size: 1.5em; /* Plus grand pour PC */
-    border: none;
-    box-shadow: none;
-    outline: non;
-    margin: 0;
-    padding: 0;
+.name {
+  grid-area: name;
+  margin: auto;
+}
+.home-img { grid-area: home-img; }
+.about-img { grid-area: about-img; }
+.resume-img { grid-area: resume-img; }
+
+.nav {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  list-style-type: none;
+  grid-area: nav;
 }
 
-h1 {
-    margin: 0;
-    padding: 0;
-    border: none;
-    outline: none;
-    display: block;
+.nav li {
+  display: flex;
 }
 
-
-/* 🔹 Titres et paragraphes */
-#P0 {
-    text-decoration: underline #FF3028;
-    font-size: 1.2em; /* Texte plus grand */
-    color: #ff4444;
-    text-shadow: 0 0 3px #cc0000;
-    font-family: Arial, sans-serif;
-    margin-bottom: 15px;
+.nav a:hover img {
+  opacity: .5;
 }
 
-#P1, #P2, #P3 {
-    color: #ff00ff; /* Magenta vif */
-    text-shadow: 0 0 1px #ff00ff, 0 0 4px #ff0044, 0 0 6px #ff0000;
-    font-size: 1.1em; /* Augmenté pour PC */
-    font-family: Courier, monospace;
-    margin-bottom: 20px;
+.card-box {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "."
+    "cards"
+    ".";
+  grid-area: card-box;
 }
 
-/* 🔹 Header spécifique pour les pages de règles */
-.rules-header {
-    width: 100%;
-    background-color: #231d1f;
-    color: #1abc9c;
-    text-align: center;
-    padding: 20px 0;
-    position: relative; /* Enlève le positionnement fixe */
+.cards {
+  grid-area: cards;
 }
 
-/* 🔹 Ajustement du main */
-.rules-header main {
-    margin-top: 10px; /* Petit espace sous le titre */
-    padding: 20px;
-    text-align: center;
-    color: #e67e22; /* Couleur du texte */
+.cards li {
+    display: inline;
+    padding: 32px;
 }
 
-
-/* 🔹 Bouton stylisé */
-a.btn {
-    display: inline-block;
+.cards li a {
+    font-size: 32px;
+    padding: 5px;
+    margin: 10px;
     text-decoration: none;
-    background-color: #008cba;
-    color: white;
-    padding: 10px 15px;
-    margin-top: 20px;
-    font-size: 1em; /* Plus grand pour PC */
-    border-radius: 8px;
-    transition: background-color 0.3s ease, transform 0.2s;
+    list-style-type: none;
 }
 
-a.btn:hover {
-    background-color: #005f73;
-    transform: scale(1.05); /* Effet de zoom au survol */
+.card img {
+    position: absolute;
+    opacity: .6;
+    transform-origin: center 400px;
+    transition:transform 1s;
+    border: 1px solid black;
+    border-radius: 5%;
 }
 
-/* 🔹 Liste dans les règles */
-.rules-header ul {
-    list-style-type: disc; /* Utilise des puces normales */
-    padding-left: 20px; /* Ajoute un léger décalage à gauche */
-    text-align: left; /* Aligne le texte à gauche pour une meilleure lisibilité */
-    display: inline-block; /* Centre la liste tout en gardant l'alignement */
+.cards .card:nth-child(1) img {
+    transform: rotate(-10deg);
+    -moz-transform: -moz-rotate(-10deg);
+    -webkit-transform: -webkit-rotate(-10deg);
 }
 
-.rules-header li {
-    margin-bottom: 10px; /* Ajoute un espace entre chaque élément de la liste */
-    font-size: 1.1em; /* Agrandit légèrement le texte */
-    color: #e67e22; /* Couleur du texte */
+.cards .card:nth-child(2) img {
+    transform: rotate(-5deg);
+    -moz-transform: -moz-rotate(-5deg);
+    -webkit-transform: -webkit-rotate(-5deg);
 }
 
-.img-style {
-    width: 300px; /* Largeur en pixels */
-    height: auto; /* Ajuste la hauteur automatiquement */
-    border-radius: 10px; /* Coins arrondis */
+.cards .card:nth-child(3) img {
+    transform: rotate(5deg);
+    -moz-transform: -moz-rotate(5deg);
+    -webkit-transform: -webkit-rotate(5deg);
 }
 
+.cards .card:nth-child(4) img {
+    transform: rotate(10deg);
+    -moz-transform: -moz-rotate(10deg);
+    -webkit-transform: -webkit-rotate(10deg);
+}
 
-/* 🔹 Responsive Design */
-@media screen and (max-width: 768px) {
+.about-container {
+    display: grid;
+    gap: 0px 0px;
+}
+
+.about-paragraph {
+    grid-area: about-paragraph;
+    text-align: right;
+    margin: auto;
+}
+
+.about-title {
+    font-size: large;
+    font-weight: bold;
+}
+
+.social-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.about-paragraph a {
+    text-decoration: none;
+}
+
+.about-paragraph a:hover img {
+    opacity: .5;
+  }
+
+@media screen and (min-width: 1440px) {
+    /* Your styles for desktop screens */
+    p {
+        word-spacing: 5px;
+        letter-spacing: 2px;
+        font-family: 'Raleway', sans-serif;
+    }
+
     .container {
-        max-width: 95%;
-        padding: 20px;
+        grid-template-columns: 0.85fr 1.3fr 0.85fr;
+        grid-template-rows: 0.5fr 2fr 0.5fr;
+        grid-template-areas:
+          ". . ."
+          "name card-box nav"
+          ". . .";
+      }
+
+    .cards .card:nth-child(1):hover img {
+        transform: rotate(-15deg);
+        -moz-transform: rotate(-15deg);
+        -webkit-transform: rotate(-15deg);
+        opacity: 1;
     }
 
-    #P0 {
-        font-size: 1.2em;
+    .cards .card:nth-child(2):hover img {
+        transform: rotate(-10deg);
+        -moz-transform: rotate(-10deg);
+        -webkit-transform: rotate(-10deg);
+        opacity: 1;
     }
 
-    #P1, #P2, #P3 {
-        font-size: 1.1em;
+    .cards .card:nth-child(3):hover img {
+        transform: rotate(-3deg);
+        -moz-transform: rotate(-3deg);
+        -webkit-transform: rotate(-3deg);
+        opacity: 1;
     }
 
-    a.btn {
-        font-size: 1.1em;
-        padding: 12px 18px;
+    .cards .card:nth-child(4):hover img {
+        transform: rotate(5deg);
+        -moz-transform: rotate(5deg);
+        -webkit-transform: rotate(5deg);
+        opacity: 1;
     }
+
+    .about-container {
+      grid-template-columns: 0.85fr 1.3fr 0.85fr;
+      grid-template-rows: 0.5fr 2fr 0.5fr;
+      grid-template-areas:
+        ". . ."
+        "name about-paragraph nav"
+        ". . .";
+    }
+}
+
+@media screen and (max-width: 1430px) {
+  .container {
+    grid-template-columns: 0.5fr 2fr 0.5fr;
+  }
+
+  .about-container {
+    grid-template-columns: 0.85fr 1.3fr 0.85fr;
+    grid-template-rows: 0.5fr 2fr 0.5fr;
+    grid-template-areas:
+      ". . ."
+      "name about-paragraph nav"
+      ". . .";
+  }
+}
+
+@media screen and (max-width: 1320px) {
+  /* Your styles for tablets in portrait mode */
+  .container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.6fr 0.4fr;
+    grid-template-areas:
+      ". . "
+      "name nav";
+  }
+
+  .card-box {
+    display: none;
+  }
+}
+
+
+@media screen and (max-width: 1100px) {
+  .about-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      ". name ."
+      ". about-paragraph ."
+      ". nav .";
+  }
+
+  .about-paragraph {
+    margin: 0;
+  }
+
+  body {
+    overflow: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+    /* Your styles for mobile devices in landscape mode */
+    .container {
+        grid-template-rows: 0.8fr 0.2fr;
+    }
+
+    .about-container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-areas:
+        "name"
+        "about-paragraph"
+        "nav";
+    }
+
+    .about-paragraph {
+      margin: 5%;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    /* Your styles for mobile devices in portrait mode */
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+          "name"
+          "nav";
+      }
 }
