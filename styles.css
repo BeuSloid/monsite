@@ -26,6 +26,24 @@ html, body {
     width: 100%;
     text-align: center;
 }
+
+
+.about-paragraph {
+    grid-area: about-paragraph;
+    text-align: center;
+    margin: auto;
+}
+
+.about-title {
+    font-size: large;
+    font-weight: bold;
+}
+
+.social-icon {
+    width: 32px;
+    height: 32px;
+}
+
 /* Nom / avatar */
 .name {
   width: 100%;
@@ -157,4 +175,6 @@ html, body {
     width: 300px;
     height: auto;
   }
+
+
 }
