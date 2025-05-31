@@ -11,7 +11,6 @@ html, body {
   overflow-x: hidden;
 }
 
-/* Conteneur principal en colonne */
 .container {
   display: flex;
   flex-direction: column;
@@ -57,7 +56,7 @@ html, body {
   object-fit: contain;
 }
 
-/* Navigation (home, about, cv) réduite */
+/* Navigation (home, about, cv) */
 .nav {
   display: flex;
   justify-content: center;
@@ -92,26 +91,51 @@ html, body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.8rem;
+  gap: 0rem; /* Si on veut modifier l'espace entre les cartes */
 }
+
 
 .card {
   position: relative;
-  width: 144px;
+  width: auto;
   height: 224px;
   overflow: hidden;
   flex: 0 0 auto;
+  margin: 0rem; /* marge autour de chaque carte cohérent avec le gap de .cards */
 }
+
 
 .card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   opacity: 0.6;
-  border: 1px solid #000;
+  border-radius: 6px;
+  border: none;           /* Supprime toute bordure */
+  box-shadow: none;       /* Supprime toute ombre éventuelle */
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.card_resume {
+  position: relative;
+  width: auto;
+  height: 224px;
+  margin: 0rem; /* même marge que les autres cartes idem que .card */
+  overflow: hidden;
+  flex: 0 0 auto;
+}
+
+/* Et l'image à l'intérieur : */
+.card_resume img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* pour remplir sans déformer */
+  opacity: 0.6;
   border-radius: 6px;
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
+
+
 
 /* Rotations */
 .cards .card:nth-child(1) img { transform: rotate(-10deg); }
@@ -175,6 +199,4 @@ html, body {
     width: 300px;
     height: auto;
   }
-
-
 }
