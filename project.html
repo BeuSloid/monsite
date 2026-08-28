@@ -5,57 +5,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beubeu Cai</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Raleway&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Bienvenue sur la page des projets !</h1>
+            <h1>Mes projets</h1>
         </header>
-        <main>
-            <h2>Projet numéro 1 : Othello (en C)</h2>
-            <p>Status : Done</p>
-            <a href="regle1.html" class="btn">Règles du jeu</a>
-            <a href="https://github.com/BeuSloid/othello" class="btn" target="_blank" rel="noopener noreferrer">Voir sur GitHub</a>
+        <main class="projects-list">
 
-            <h2>Projet numéro 2 : Jeu de Nim (en JAVA)</h2>
-            <p>Status : Done</p>
-            <a href="regle2.html" class="btn">Règles du jeu</a>
-            <a href="https://github.com/BeuSloid/jeu_de_nim" class="btn" target="_blank" rel="noopener noreferrer">Voir sur GitHub</a>
+            <article class="project-card">
+                <div class="project-header">
+                    <h2>Othello</h2>
+                    <span class="status-badge status-done">Terminé</span>
+                </div>
+                <p class="project-lang">C</p>
+                <div class="project-links">
+                    <a href="regle1.html" class="btn">Règles du jeu</a>
+                    <a href="https://github.com/BeuSloid/othello" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Voir sur GitHub</a>
+                </div>
+            </article>
 
-            <h2>Projet numéro 3 : Master Mind (en JAVA)</h2>
-            <p>Status : Done</p>
-            <a href="regle3.html" class="btn">Règles du jeu</a>
-            <a href="https://github.com/BeuSloid/master_mind" class="btn" target="_blank" rel="noopener noreferrer">Voir sur GitHub</a>
+            <article class="project-card">
+                <div class="project-header">
+                    <h2>Jeu de Nim</h2>
+                    <span class="status-badge status-done">Terminé</span>
+                </div>
+                <p class="project-lang">Java</p>
+                <div class="project-links">
+                    <a href="regle2.html" class="btn">Règles du jeu</a>
+                    <a href="https://github.com/BeuSloid/jeu_de_nim" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Voir sur GitHub</a>
+                </div>
+            </article>
 
-            <h2>Projet numéro 4 : Puissance 4 (en JAVA avec Framework JavaFX)</h2>
-            <p>Status : Done</p>
-            <a href="regle4.html" class="btn">Règles du jeu</a>
-            <a href="https://github.com/BeuSloid/puissance4" class="btn" target="_blank" rel="noopener noreferrer">Voir sur GitHub</a>
+            <article class="project-card">
+                <div class="project-header">
+                    <h2>Master Mind</h2>
+                    <span class="status-badge status-done">Terminé</span>
+                </div>
+                <p class="project-lang">Java</p>
+                <div class="project-links">
+                    <a href="regle3.html" class="btn">Règles du jeu</a>
+                    <a href="https://github.com/BeuSloid/master_mind" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Voir sur GitHub</a>
+                </div>
+            </article>
 
-            <h2>Projet numéro 5 : Akropolis (en C++ avec Framework Qt)</h2>
-            <p>Status : Done</p>
-            <a href="regle5.html" class="btn">Règles du jeu</a>
-            <a href="https://github.com/BeuSloid/Projet---LO21---A25" class="btn" target="_blank" rel="noopener noreferrer">Voir sur GitHub</a>
+            <article class="project-card">
+                <div class="project-header">
+                    <h2>Puissance 4</h2>
+                    <span class="status-badge status-done">Terminé</span>
+                </div>
+                <p class="project-lang">Java, JavaFX</p>
+                <div class="project-links">
+                    <a href="regle4.html" class="btn">Règles du jeu</a>
+                    <a href="https://github.com/BeuSloid/puissance4" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Voir sur GitHub</a>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-header">
+                    <h2>Akropolis</h2>
+                    <span class="status-badge status-done">Terminé</span>
+                </div>
+                <p class="project-lang">C++, Qt</p>
+                <div class="project-links">
+                    <a href="regle5.html" class="btn">Règles du jeu</a>
+                    <a href="https://github.com/BeuSloid/Projet---LO21---A25" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Voir sur GitHub</a>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-header">
+                    <h2>Cartographie Guidée</h2>
+                    <span class="status-badge status-done">Terminé</span>
+                </div>
+                <p class="project-lang">Python, ROS2</p>
+                <div class="project-links">
+                    <a href="regle6.html" class="btn">Sujet du projet</a>
+                    <a href="https://github.com/BeuSloid/SY31-Cartographie-Guidee-P26" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Voir sur GitHub</a>
+                </div>
+            </article>
+
         </main>
+
+        <ul class="nav">
+            <li>
+                <a href="index.html" class="header-image">
+                    <img src="images/home.png" alt="home">
+                </a>
+            </li>
+            <li>
+                <a href="about.html" class="header-image">
+                    <img src="images/about.png" alt="about">
+                </a>
+            </li>
+            <li>
+                <a href="images/resume_cv.pdf" class="header-image" target="_blank" rel="noopener noreferrer">
+                    <img src="images/cv.png" alt="resume">
+                </a>
+            </li>
+        </ul>
     </div>
-    </div>
-            <ul class="nav">
-                <li>
-                    <a href="index.html" class="header-image">
-                        <img src="images/home.png" alt="home">
-                    </a>
-                </li>
-                <li>
-                    <a href="about.html" class="header-image">
-                        <img src="images/about.png" alt="about">
-                    </a>
-                </li>
-                <li>
-                    <a href="images/resume_cv.pdf" class="header-image" target="_blank" rel="noopener noreferrer">
-                        <img src="images/cv.png" alt="resume">
-                    </a>
-                </li>
-            </ul>
-        </div>
 </body>
 </html>

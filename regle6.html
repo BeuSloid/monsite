@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Suivante</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="rules-header">
+        <h1>Bienvenue sur la page du projet</h1>
+
+    <main>
+    <h2>Cartographie Guidée !</h2>
+    <!-- Affichage de l'image -->
+    <img src="images/turtlebot.jpeg" alt="Image TurtleBot" class="img-style">
+    <p>Le projet de la cartographie guidée est un projet développé en langage python et ROS2 sur un turtleBot lors du semestre P26 en GI02 (c'est-à-dire le 2ème semestre en branche informatique dans la 3ème année).</p>
+    <p>Il s’agit d’un projet en binôme</p>
+    <ul>
+        <li>
+            Ce projet s'inscrit dans le cadre de l'UV SY31 Capteurs pour les systèmes intelligents, et a pour objectif de mettre en œuvre une solution robotique combinant perception et localisation pour un robot mobile évoluant dans un labyrinthe. Le sujet traité est celui de la cartographie guidée : un TurtleBot3 Burger est guidé manuellement à l'intérieur d'un labyrinthe à l'aide de commandes clavier, tout en construisant progressivement une carte de son environnement.
+
+Le robot utilise une fusion d'informations provenant de ses capteurs proprioceptifs (encodeurs de roue et gyroscope) pour estimer sa position, et de son LiDAR pour générer une carte basée sur l'accumulation de points dans un repère fixe. En parallèle, une caméra embarquée permet de détecter des flèches colorées disposées dans le labyrinthe. Cette reconnaissance visuelle assiste l'opérateur dans ses choix directionnels pendant la commande.
+
+Le projet a été implémenté sous ROS2 (Robot Operating System 2) en Python, en s'appuyant sur une architecture modulaire distribuée en plusieurs nœuds spécialisés. Nous avons calculé nous-mêmes l'odométrie à partir des capteurs proprioceptifs.
+        </li>
+    </ul>
+    <!-- Bouton pour retourner à la page des projets -->
+    <a href="project.html" class="btn">Retour à la page des projets</a>
+</main>
+
+    </header>
+</body>
+</html>
